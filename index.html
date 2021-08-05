@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id-Card-Generator</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="">
+    <header>
+        <div class="bg-red-300 text-center rounded-3xl text-2xl font-bold py-8"> Id Card Generator</div>
+    </header>
+    <section>
+        <div class=" flex justify- rounded-3xl m-5 bg-red-200	">
+            <div class="user-details w-1/2 border-4 m-12 rounded-3xl bg-white">
+                <div class="pt-6 pl-12 text-black text-3xl font-bold">Enter Student Details</div>
+                
+                    <form>
+                        <div class="flex flex-col w-1/2 ml-10 mt-8">
+                            <label for="student-name" class="font-semibold">Enter  Name</label>
+                             <input type="text" id="student-name" placeholder="Enter your name here" class="border-2">
+                        </div>
+
+                        <div class="flex flex-col w-1/2 ml-10 mt-4">
+                            <label for="college-name" class="font-semibold">Enter College  Name</label>
+                             <input type="text" id="college-name" placeholder="Enter name here" class="border-2">
+                        </div>
+
+                        <div class="flex flex-col w-1/2 ml-10 mt-4">
+                            <label for="class-name" class="font-semibold">Class</label>
+                             <input type="text" id="class-name" placeholder="Enter class here" class="border-2">
+                        </div>
+
+                        <div class="flex flex-col w-1/2 ml-10 mt-4">
+                            <label for="date-of-birth" class="font-semibold">D.O.B</label>
+                             <input type="date" id="date-of-birth" placeholder="Enter your name here" class="border-2">
+                        </div>
+
+                        <div class="select-file flex flex-col w-1/2 ml-10 mt-4">
+                            <label for="image-upload" class="image-upload">Upload Student Image</label>
+                            <input type="file" id="image-upload"  class="border" onchange="previewImage(event)"/>
+                        </div>
+
+                        <div>
+                            <button class=" border-4 w-40 rounded-3xl ml-60 mt-6 font-semibold px-3" onclick="generateIdCard(event)">Submit</button>
+                        </div>
+
+                        
+                     </form>   
+                   
+
+                
+                
+            </div>
+                <div id="generatedCard" class=" generatediCard w-1/2 border-4 m-12 rounded-3xl  bg-white">
+                    
+                        <div class="pt-6 pl-12 text-black text-3xl font-bold">Generated Card</div>
+
+                       <div class=" flex m-8 ml-16   h-60 border-4">
+                           
+                           <div class="bg-gradient-to-t from-red-400 via-white to-red-100 border w-40 h-50 flex items-center justify-center ">
+                               <img class="rounded-full w-40 h-40" id="student-image" src="#" alt="your-image"/>
+                           </div>
+                             
+                                <div class="font-bold  pt-6 m-6 ">
+                                    <div class="">
+                                        <span>Name:</span>
+                                        <span class="font-semibold" id="generated-name">Chirag</span>
+                                    </div>
+
+                                    <div class="pt-3 w-80 " >
+                                        <span>College Name:</span>
+                                        <span class="font-semibold" id="generated-college-name">MIT</span>
+                                    </div>
+
+                                    <div class="pt-3  w-80">
+                                        <span>Class:</span>
+                                        <span class="font-semibold" id="generated-class">Bsc 3rd year</span>
+                                    </div>
+
+                                    <div class="pt-3  w-80">
+                                        <span>D.O.B:</span>
+                                        <span class="font-semibold" id="generated-dob">04/01/2001</span>
+                                    </div>
+
+
+                                </div>
+                             
+                           
+
+                       </div>
+
+                    
+                       
+                </div>
+            
+        </div>
+    </section>
+<script src="/js/script.js"></script>
+    
+   </body>
+</html>
